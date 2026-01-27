@@ -28,15 +28,3 @@ yarn-error.log*
 
 # 6. Local testing files
 .vercel
-
-# 7. Public folder
-public/*
-
-!public/favicon.ico
-!public/favicon-16x16.png
-!public/favicon-32x32.png
-!public/apple-touch-icon.png
-!public/android-chrome-192x192.png
-!public/android-chrome-512x512.png
-!public/site.webmanifest
-!logo.png

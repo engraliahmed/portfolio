@@ -1,6 +1,5 @@
 # 1. Dependencies 
 node_modules/
-content
 
 # 2. Next.js Build Outputs 
 .next/

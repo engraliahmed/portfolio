@@ -1,26 +1,26 @@
-# 1. Dependencies - Ye files 'npm install' se khud aa jati hain
+# 1. Dependencies 
 node_modules/
 content
 
-# 2. Next.js Build Outputs - Inhein push karne se repo heavy ho jati hai
+# 2. Next.js Build Outputs 
 .next/
 out/
 build/
 
-# 3. Environment Variables - SENSITIVE DATA (Blogger API keys etc.)
+# 3. Environment Variables
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# 4. OS/IDE Specific - Fuzool desktop files
+# 4. OS/IDE Specific 
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
-# 5. Logs - Debugging kachra
+# 5. Logs 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

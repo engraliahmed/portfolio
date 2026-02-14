@@ -15,21 +15,29 @@ import {
 } from "lucide-react";
 
 export default function CertificatesPage() {
-
     const sortedCerts = useMemo(() => {
-        const featured = certificates.filter(c => c.featured);
-        const standard = certificates.filter(c => !c.featured);
+        const featured = certificates.filter((c) => c.featured);
+        const standard = certificates.filter((c) => !c.featured);
 
         const sortByOrder = (data, orderList) => {
             return [...data].sort((a, b) => {
                 const indexA = orderList.indexOf(a.id);
                 const indexB = orderList.indexOf(b.id);
-                return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+                return (
+                    (indexA === -1 ? 999 : indexA) -
+                    (indexB === -1 ? 999 : indexB)
+                );
             });
         };
 
-        const sortedFeatured = sortByOrder(featured, certOrder.featuredOrder || []);
-        const sortedStandard = sortByOrder(standard, certOrder.standardOrder || []);
+        const sortedFeatured = sortByOrder(
+            featured,
+            certOrder.featuredOrder || [],
+        );
+        const sortedStandard = sortByOrder(
+            standard,
+            certOrder.standardOrder || [],
+        );
 
         return [...sortedFeatured, ...sortedStandard];
     }, [certificates]);
@@ -40,11 +48,10 @@ export default function CertificatesPage() {
 
     const isAllShown = visibleCount >= sortedCerts.length;
 
-    // Toggle Function: Mazeed dikhane ya wapas collapse karne ke liye
+    // Toggle Function:
     const toggleVisible = () => {
         if (isAllShown) {
             setVisibleCount(INITIAL_COUNT);
-            // Show less karne par wapas section ke start par scroll karega
             document
                 .getElementById("certificates")
                 ?.scrollIntoView({ behavior: "smooth" });
@@ -85,7 +92,7 @@ export default function CertificatesPage() {
                     ))}
                 </div>
 
-                {/* Control Button: Sirf tab dikhega jab certificates 6 se zyada hon */}
+                {/* Control Button */}
                 {sortedCerts.length > INITIAL_COUNT && (
                     <div className="mt-16 flex justify-center">
                         <button
@@ -134,12 +141,12 @@ const CertificateCard = ({ cert }) => {
                         src={cert.image}
                         alt={cert.title}
                         className="object-top transition-transform duration-700 group-hover:scale-105"
-                        // loading="lazy"
-                        // priority={isFeatured}
-                        width={500} // Ye dena zaroori hai
+                        width={500}
                         height={300}
-                        unoptimized={true}
                         priority={isFeatured}
+                        quality={75}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+ZNPQAIXQM485D16IAAAAASUVORK5CYII="
                     />
                 ) : (
                     <Award size={48} className="text-gray-800 opacity-20" />

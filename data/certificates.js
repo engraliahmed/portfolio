@@ -133,7 +133,7 @@ export const certificates = [
         date: "Dec 2025",
         description:
             "Successfully validated end-to-end software development skills through a comprehensive assessment covering web development, cloud-native architectures, and software engineering best practices.",
-        image: "/certificates/Full Stack Software development assessment.webp",
+        image: "/certificates/full stack software development assessment.webp",
         verifyLink: "https://coursera.org/verify/PQMNGY4D9E2P",
     },
     {

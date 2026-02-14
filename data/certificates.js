@@ -51,7 +51,7 @@ export const certificates = [
         date: "Dec 2025",
         description:
             "Gained hands-on experience in building and deploying AI-powered web applications by integrating machine learning models with the Flask web framework.",
-        image: "/certificates/Developing AI Application with Flask.webp",
+        image: "/certificates/Developing AI application with Flask.webp",
         verifyLink: "https://coursera.org/verify/4N2RDBHLTKNV",
     },
     {

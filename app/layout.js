@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,6 +52,17 @@ export default function RootLayout({ children }) {
                 className={`${inter.className} antialiased overflow-x-hidden w-full relative`}
                 suppressHydrationWarning={true}
             >
+                <NextTopLoader 
+                    color="#951eea" 
+                    initialPosition={0.08}
+                    crawlSpeed={200}
+                    height={3}
+                    crawl={true}
+                    showSpinner={false}
+                    easing="ease"
+                    speed={200}
+                    shadow="0 0 10px #ef4444,0 0 5px #ef4444"
+                />
                 <Navbar />
                 {/* Adds padding-top so content isn't hidden behind the fixed Navbar */}
                 <main className="pt-20 min-h-screen">{children}</main>
